@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stili.css" />
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+  <h1>Photoshop</h1>
+    <input type='file' id="i" required/>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <canvas id="canvas1" width="400" height="400"></canvas>
+    <div><button id="ponastavi">ponastavi</button><br/></div>
+    <div>Svetlost: <input type="range" name="slider" min="0" max="2" id="brightness" step="0.01" oninput="rangevalueb.value=value"/>
+      <output id="rangevalueb">0</output></div>
+   
+    <div>
+      <h2>Osnovne funkcije</h2>
+      <button id="invert">invert</button>
+      <button id="grayscale">grayscale</button>
+      Treshold<input type="range" min="0" max="255" step="0.01" value='0' class="slider" id="treshold" oninput="rangevaluet.value=value"/>
+    <output id="rangevaluet">0</output><br/>
+    </div>
+      <div>
+        <h2>Jedrne funkcije</h2>
+        <button id="box">box</button>
+        <button id="guassian">guassian blur</button>
+        <button id="sharpening">sharpening</button><br/>
+        <button id="unsharp">unsharp masking</button>
+        <button id="laplace">laplace</button>
+        <button id="sobel">sobel</button>
+      </div>
+      <div><h2>Odstrani barvne kanale</h2>
+        <button id="ordec">odstrani rdeč kanal</button>
+        <button id="omoder">odstrani moder kanal</button>
+        <button id="ozelen">odstrani zelen kanal</button>
+      
+      <div>
+        <h2>Izpostavi barvne kanale</h2>
+    rdeč kanal: <input type="range" min="0" max="255" step="0.01" value='0' class="slider" id="rdec" oninput="rangevaluer.value=value"/>
+    <output id="rangevaluer">0</output><br/>
+    moder kanal: <input type="range" min="0" max="255" step="0.01" value='0' class="slider" id="moder"oninput="rangevaluem.value=value"/>
+    <output id="rangevaluem">0</output><br/>
+    zelen kanal: <input type="range" min="0" max="255" step="0.01" value='0' class="slider" id="zelen" oninput="rangevaluez.value=value"/>
+    <output id="rangevaluez">0</output>
+    </div>
+    </div>
+    <div id="chartContainer" ></div>
+<script src="skripte.js"></script>
+</body>
+</html>
